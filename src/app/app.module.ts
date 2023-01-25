@@ -8,6 +8,7 @@ import { PerifericosComponent } from './components/perifericos/perifericos.compo
 import { PcsComponent } from './components/pcs/pcs.component';
 import { EntregaProductosComponent } from './components/entrega-productos/entrega-productos.component';
 import { EntregaTonersComponent } from './components/entrega-toners/entrega-toners.component';
+import { EntregaPcComponent } from './components/entrega-pc/entrega-pc.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { EntregaTonersComponent } from './components/entrega-toners/entrega-tone
     PerifericosComponent,
     PcsComponent,
     EntregaProductosComponent,
-    EntregaTonersComponent
+    EntregaTonersComponent,
+    EntregaPcComponent
   ],
   imports: [
     BrowserModule,
