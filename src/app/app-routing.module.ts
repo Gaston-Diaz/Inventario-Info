@@ -8,6 +8,7 @@ import { PerifericosComponent } from './components/perifericos/perifericos.compo
 import { TonersComponent } from './components/toners/toners.component';
 
 const routes: Routes = [
+  {path:'',component:PerifericosComponent},
   {path:'toners',component: TonersComponent},
   {path:'entregaToners',component: EntregaTonersComponent},
   {path:'pcs',component:PcsComponent},
