@@ -13,4 +13,4 @@ export class Toner{
     color: string = "";
     convMarco: string= "";
     stockDispo: number= 0;
-}
+} 
