@@ -10,6 +10,9 @@ import { EntregaProductosComponent } from './components/entrega-productos/entreg
 import { EntregaTonersComponent } from './components/entrega-toners/entrega-toners.component';
 import { EntregaPcComponent } from './components/entrega-pc/entrega-pc.component';
 import { FormsModule } from '@angular/forms';
+import { STonerService } from './services/s-toner.service';
+import { SPcService } from './services/s-pc.service';
+import { SPerisfericoService } from './services/s-perisferico.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,7 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [STonerService,SPcService,SPerisfericoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

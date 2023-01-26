@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Periferico } from 'src/app/models/periferico.model';
+import { SPerisfericoService } from 'src/app/services/s-perisferico.service';
 
 @Component({
   selector: 'app-perifericos',
@@ -9,15 +10,16 @@ import { Periferico } from 'src/app/models/periferico.model';
 export class PerifericosComponent {
   titulo = "Lista de Perisfericos"
 
-  constructor() { }
+  constructor(private perisfericoService:SPerisfericoService) {
+    
+    this.perisfericos = perisfericoService.perisfericos;
+  }
 
-  perisfericos:Periferico[]=[
-
-  ]
+  perisfericos:Periferico[]=[]
 
   agregarPerisferico(){
     let miPerisferico = new Periferico(this.inputNombreP,this.inputDescripcion,this.inputObservacion,this.inputStock);
-    this.perisfericos.push(miPerisferico);
+    this.perisfericoService.agregarPerisfericoService(miPerisferico);
   }
 
   inputNombreP:string="";

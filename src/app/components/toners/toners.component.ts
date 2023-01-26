@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Toner } from 'src/app/models/toner.model';
+import { STonerService } from 'src/app/services/s-toner.service';
 
 
 @Component({
@@ -8,23 +9,19 @@ import { Toner } from 'src/app/models/toner.model';
   styleUrls: ['./toners.component.css']
 })
 export class TonersComponent{
-  titulo = "Lista de Toners"
+  titulo = "Listado de Toners"
 
-  constructor() { }
+  constructor(private tonerService:STonerService) {
 
-  toners:Toner[]=[
+    this.toners = this.tonerService.toners;
+  }
 
-    new Toner("toner1","impresora1","color","si",5),
-    new Toner("toner2","impresora2","negro","si",5),
-    new Toner("toner3","impresora3","color","si",5),
-    new Toner("toner4","impresora4","color","si",5),
-  ];
+  toners:Toner[]=[];
   
   
   agregarToner(){
     let miToner = new Toner(this.inputMToner,this.inputMImpre,this.inputColor,this.inputConve,this.inputStock);
-    console.log(miToner);
-    this.toners.push(miToner);
+    this.tonerService.agregarTonerService(miToner);
   }
   
   
