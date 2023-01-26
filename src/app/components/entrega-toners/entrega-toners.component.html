@@ -1,1 +1,53 @@
 <p>entrega-toners works!</p>
+<div class="container">
+    <div class="col"><h1>{{titulo}}</h1></div>
+    <br>
+    <div class="form-group row">
+
+        <div class="form-group col md-3">
+            <label for="fecha">Fecha</label>
+            <input type="text" nombre="fecha" id="fecha" placeholder="Fecha" class="form-control" [(ngModel)]="inputFecha">
+        </div>
+
+        <div class="form-group col md-3">
+            <label for="idTonerE">Modelo Toner</label>
+            <input type="text" nombre="idTonerE" id="idTonerE" placeholder="Modelo Toner" class="form-control" [(ngModel)]="inputIdToner">
+        </div>
+
+        <div class="form-group col md-3">
+            <label for="colorE">Color</label>
+            <input type="text" nombre="colorE" id="colorE" placeholder="Color" class="form-control" [(ngModel)]="inputColor">
+        </div>
+
+        <div class="form-group col md-3">
+            <label for="entregaA">Entregado A</label>
+            <input type="text" nombre="entregaA" id="entregaA" placeholder="Entregado A" class="form-control" [(ngModel)]="inputEntregadoA">
+        </div>
+
+        <div class="form-group col md-3">
+            <label for="ofi">Oficina</label>
+            <input type="text" nombre="ofi" id="ofi" placeholder="Oficina" class="form-control" [(ngModel)]="inputOficina">
+        </div>
+
+        <div class="form-group col md-3">
+            <label for="de">De</label>
+            <input type="text" nombre="de" id="de" placeholder="De" class="form-control" [(ngModel)]="inputDe">
+        </div>
+
+        <div class="col" style="margin-top: 2.1%;">
+            <button type="submit" class="btn btn-primary" (click)="agregarEToner()">Agregar</button>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div *ngFor="let etoner of etoners">
+                    {{etoner.fecha}} {{etoner.idToner}} {{etoner.color}} {{etoner.entregadoA}} {{etoner.oficina}} {{etoner.de}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
