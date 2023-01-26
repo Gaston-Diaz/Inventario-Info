@@ -1,1 +1,44 @@
 <p>perifericos works!</p>
+<div class="container">
+    <div class="col"><h1>{{titulo}}</h1></div>
+    <br>
+    <div class="form-group row">
+
+        <div class="form-group col md-3">
+            <label for="producto">Producto</label>
+            <input type="text" nombre="producto" id="producto" placeholder="Producto" class="form-control" [(ngModel)]="inputNombreP">
+        </div>
+        
+        <div class="form-group col md-3">
+            <label for="descripcion">Descripcion</label>
+            <input type="text" nombre="descripcion" id="descripcion" placeholder="Descripcion" class="form-control" [(ngModel)]="inputDescripcion">
+        </div>
+
+        <div class="form-group col md-3">
+            <label for="observacion">Observacion</label>
+            <input type="text" nombre="observacion" id="observacion" placeholder="Observacion" class="form-control" [(ngModel)]="inputObservacion">
+        </div>
+
+        <div class="form-group col md-3">
+            <label for="stock">Stock</label>
+            <input type="text" nombre="stock" id="stock" placeholder="Stock" class="form-control" [(ngModel)]="inputStock">
+        </div>
+
+        <div class="col">
+            <button type="submit" class="btn btn-primary" (click)="agregarPerisferico()">Agregar</button>
+        </div>
+
+    </div>
+</div>
+
+<br>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div *ngFor="let perisferico of perisfericos">
+                {{perisferico.nombreProducto}} {{perisferico.descripcion}} {{perisferico.observacion}} {{perisferico.stockActual}}
+            </div>
+        </div>
+    </div>
+</div>
