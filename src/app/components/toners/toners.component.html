@@ -21,16 +21,16 @@
         </div>
 
         <div class="form-group col md-3">
-            <label for="stock">Stock</label>
-            <input type="text" nombre="stock" id="stock" placeholder="Stock" class="form-control" [(ngModel)]="inputStock">
-        </div>
-
-        <div class="form-group col md-3">
             <label for="convMarco">Conve.Marco</label>
             <input type="text" nombre="conveMarco" id="conveMarco" placeholder="Conve. Marco" class="form-control" [(ngModel)]="inputConve">
         </div>
 
-        <div class="col">
+        <div class="form-group col md-3">
+            <label for="stock">Stock</label>
+            <input type="text" nombre="stock" id="stock" placeholder="Stock" class="form-control" [(ngModel)]="inputStock">
+        </div>
+
+        <div class="col" style="align-items: baseline;">
             <button type="submit" class="btn btn-primary" (click)="agregarToner()">Agregar</button>
         </div>
         
@@ -43,7 +43,7 @@
     <div class="row">
         <div class="col">
             <div *ngFor="let toner of toners">
-                {{toner.nombreToner}} {{toner.modeloImpre}} {{toner.color}} {{toner.stockDispo}} {{toner.convMarco}}
+                {{toner.nombreToner}} {{toner.modeloImpre}} {{toner.color}} {{toner.convMarco}} {{toner.stockDispo}}
             </div>
         </div>
     </div>
