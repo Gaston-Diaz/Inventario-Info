@@ -22,6 +22,6 @@ export class PcsComponent {
   inputRam: string="";
   inputSO: string="";
   inputSSD: string="";
-  inputExtra: string="";
+  inputExtra: string="OK";
   inputDisponible: string="SI";
 }
