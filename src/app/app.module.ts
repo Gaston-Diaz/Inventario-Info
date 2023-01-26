@@ -9,6 +9,7 @@ import { PcsComponent } from './components/pcs/pcs.component';
 import { EntregaProductosComponent } from './components/entrega-productos/entrega-productos.component';
 import { EntregaTonersComponent } from './components/entrega-toners/entrega-toners.component';
 import { EntregaPcComponent } from './components/entrega-pc/entrega-pc.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { EntregaPcComponent } from './components/entrega-pc/entrega-pc.component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,7 +7,7 @@ export class Toner{
         this.stockDispo = unStock;
         this.convMarco = conveM;
     }
-
+ 
     nombreToner: string ="";
     modeloImpre: string = "";
     color: string = "";
