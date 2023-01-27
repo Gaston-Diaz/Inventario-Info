@@ -10,6 +10,10 @@ import { EntregaProductosComponent } from './components/entrega-productos/entreg
 import { EntregaTonersComponent } from './components/entrega-toners/entrega-toners.component';
 import { EntregaPcComponent } from './components/entrega-pc/entrega-pc.component';
 import { FormsModule } from '@angular/forms';
+import { STonerService } from './services/s-toner.service';
+import { SPcService } from './services/s-pc.service';
+import { SPerisfericoService } from './services/s-perisferico.service';
+import { ModTonerComponent } from './components/toners/mod-toner/mod-toner.component';
 
 @NgModule({
   declarations: [
@@ -19,14 +23,15 @@ import { FormsModule } from '@angular/forms';
     PcsComponent,
     EntregaProductosComponent,
     EntregaTonersComponent,
-    EntregaPcComponent
+    EntregaPcComponent,
+    ModTonerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [STonerService,SPcService,SPerisfericoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
