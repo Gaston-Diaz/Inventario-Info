@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { STonerService } from './services/s-toner.service';
 import { SPcService } from './services/s-pc.service';
 import { SPerisfericoService } from './services/s-perisferico.service';
+import { ModTonerComponent } from './components/toners/mod-toner/mod-toner.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SPerisfericoService } from './services/s-perisferico.service';
     PcsComponent,
     EntregaProductosComponent,
     EntregaTonersComponent,
-    EntregaPcComponent
+    EntregaPcComponent,
+    ModTonerComponent
   ],
   imports: [
     BrowserModule,
