@@ -9,7 +9,7 @@ import { STonerService } from 'src/app/services/s-toner.service';
   styleUrls: ['./mod-toner.component.css']
 })
 export class ModTonerComponent implements OnInit {
-  titulo = "Actualizar stock de Toner"
+  titulo = "Modificar Datos - Actualizar stock de Toner"
   constructor(private route:ActivatedRoute, private tonerService:STonerService, private router: Router) { }
 
   toners: Toner[]=[];
