@@ -1,1 +1,50 @@
 <p>entrega-pc works!</p>
+<div class="container">
+    <div class="col"><h1>{{titulo}}</h1></div>
+    <br>
+    <div class="form-group row">
+
+        <div class=" form-group col md-3">
+            <label for="fechaEPC">Fecha:</label>
+            <input type="text" nombre="fechaEPC" id="fechaEPC" placeholder="Fecha" class="form-control" [(ngModel)]="inputFechaPC">
+        </div>
+
+        <div class=" form-group col md-3">
+            <label for="idPcE">ID PC:</label>
+            <input type="text" nombre="idPcE" id="idPcE" placeholder="ID PC" class="form-control" [(ngModel)]="inputIdPc">
+        </div>
+
+        <div class=" form-group col md-3">
+            <label for="entregaA">Entregado A:</label>
+            <input type="text" nombre="entregaA" id="entregaA" placeholder="Entregado a" class="form-control" [(ngModel)]="inputEntregadoA">
+        </div>
+
+        <div class=" form-group col md-3">
+            <label for="oficinaE">Oficina</label>
+            <input type="text" nombre="oficinaE" id="oficinaE" placeholder="Oficina" class="form-control" [(ngModel)]="inputOficina">
+        </div>
+
+        <div class=" form-group col md-3">
+            <label for="deE">De:</label>
+            <input type="text" nombre="deE" id="deE" placeholder="De" class="form-control" [(ngModel)]="inputDe">
+        </div>
+
+        <div class="col" style="margin-top: 2.1%;">
+            <button type="submit" class="btn btn-primary" (click)="agregarEPC()">Agregar</button>
+        </div>
+
+    </div>
+
+    <br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div *ngFor="let epc of ePcs">
+                    {{epc.fechaEPC}} {{epc.idPc}} {{epc.entregadoA}} {{epc.oficina}} {{epc.de}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
