@@ -49,8 +49,10 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <div *ngFor="let pc of pcs">
-                    {{pc.id}} {{pc.ram}} {{pc.so}} {{pc.ssd}} {{pc.extra}} {{pc.disponible}}
+                <div *ngFor="let pc of pcs, let indice = index">
+                    <a [routerLink]="['/actPC',indice]">
+                        {{indice}} {{pc.id}} {{pc.ram}} {{pc.so}} {{pc.ssd}} {{pc.extra}} {{pc.disponible}}
+                    </a>
                 </div>
             </div>
         </div>
