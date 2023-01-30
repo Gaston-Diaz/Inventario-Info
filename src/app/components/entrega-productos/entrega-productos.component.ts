@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EPerisferico } from 'src/app/models/ePerisferico.model';
+import { SEperisfericoServiceService } from 'src/app/services/s-eperisferico-service.service';
 
 @Component({
   selector: 'app-entrega-productos',
@@ -9,13 +10,15 @@ import { EPerisferico } from 'src/app/models/ePerisferico.model';
 export class EntregaProductosComponent {
   titulo= "Entrega de Perifericos"
 
-  constructor() { }
+  constructor(private eperisfericoService: SEperisfericoServiceService) { 
+    this.ePerifericos = this.eperisfericoService.ePerisferico;
+  }
 
   ePerifericos: EPerisferico[]=[]
 
   agregarEPeriferico(){
     let ePeriferico = new EPerisferico(this.inputFecha,this.inputProducto,this.inputDescripcion,this.inputCantidad,this.inputEntregadoA,this.inputOficina,this.inputDe);
-    this.ePerifericos.push(ePeriferico);
+    this.eperisfericoService.agregarEperisfericoService(ePeriferico);
   }
 
   inputFecha:string="";

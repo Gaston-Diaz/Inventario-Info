@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EPC } from 'src/app/models/ePc-model';
+import { SEpcServiceService } from 'src/app/services/s-epc-service.service';
 
 
 @Component({
@@ -10,13 +11,15 @@ import { EPC } from 'src/app/models/ePc-model';
 export class EntregaPcComponent{
   titulo = "Entrega de PCs"
 
-  constructor() { }
+  constructor(private epcService: SEpcServiceService) { 
+    this.ePcs = this.epcService.ePCs;
+  }
 
   ePcs: EPC[]=[];
   
   agregarEPC(){
     let ePc = new EPC(this.inputFechaPC,this.inputIdPc,this.inputEntregadoA,this.inputOficina,this.inputDe);
-    this.ePcs.push(ePc);
+    this.epcService.agregarEpcService(ePc);
   }
 
   inputFechaPC:string= "";
