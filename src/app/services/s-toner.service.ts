@@ -34,5 +34,4 @@ export class STonerService {
     tonerModificado.stockDispo = toner.stockDispo;
   }
 
-
 }

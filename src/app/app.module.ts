@@ -14,6 +14,7 @@ import { STonerService } from './services/s-toner.service';
 import { SPcService } from './services/s-pc.service';
 import { SPerisfericoService } from './services/s-perisferico.service';
 import { ModTonerComponent } from './components/toners/mod-toner/mod-toner.component';
+import { ModPerisfericosComponent } from './components/perifericos/mod-perisfericos/mod-perisfericos.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ModTonerComponent } from './components/toners/mod-toner/mod-toner.compo
     EntregaProductosComponent,
     EntregaTonersComponent,
     EntregaPcComponent,
-    ModTonerComponent
+    ModTonerComponent,
+    ModPerisfericosComponent
   ],
   imports: [
     BrowserModule,

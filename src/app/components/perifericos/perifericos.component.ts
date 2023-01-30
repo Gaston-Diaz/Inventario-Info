@@ -8,7 +8,7 @@ import { SPerisfericoService } from 'src/app/services/s-perisferico.service';
   styleUrls: ['./perifericos.component.css']
 })
 export class PerifericosComponent {
-  titulo = "Lista de Perisfericos"
+  titulo = "Lista de Perifericos"
 
   constructor(private perisfericoService:SPerisfericoService) {
     
