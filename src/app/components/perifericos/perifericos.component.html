@@ -36,10 +36,27 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <div *ngFor="let perisferico of perisfericos, let indice = index">
-                <a [routerLink]="['/actPeriferico',indice]">
-                    {{indice}} {{perisferico.nombreProducto}} {{perisferico.descripcion}} {{perisferico.observacion}} {{perisferico.stockActual}}
-                </a>
+            <div >
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Producto</th>
+                        <th scope="col">Descripcion</th>
+                        <th scope="col">Observacion</th>
+                        <th scope="col">Stock</th>
+                        <th scope="col">Modificar</th>
+                      </tr>
+                    </thead>
+                    <tbody *ngFor="let perisferico of perisfericos, let indice = index">
+                      <tr>
+                        <td>{{perisferico.nombreProducto}}</td>
+                        <td>{{perisferico.descripcion}}</td>
+                        <td>{{perisferico.observacion}}</td>
+                        <td>{{perisferico.stockActual}}</td>
+                        <td><a [routerLink]="['/actPeriferico',indice]">Modificar</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
             </div>
         </div>
     </div>

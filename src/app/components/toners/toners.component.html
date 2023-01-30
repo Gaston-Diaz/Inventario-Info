@@ -42,10 +42,29 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <div *ngFor="let toner of toners; let indice =index">
-                <a [routerLink]="['/actToner',indice]">
-                    {{indice}} {{toner.nombreToner}} {{toner.modeloImpre}} {{toner.color}} {{toner.convMarco}} {{toner.stockDispo}}
-                </a>
+            <div >
+                <table class="table">
+                    <thead>
+                        <tr>
+                          <th scope="col">Modelo Toner</th>
+                          <th scope="col">Modelo Impresora</th>
+                          <th scope="col">Color</th>
+                          <th scope="col">Conve. Marco</th>
+                          <th scope="col">Stock</th>
+                          <th scope="col">Modificar</th>
+                        </tr>
+                      </thead>
+                    <tbody *ngFor="let toner of toners; let indice =index">
+                      <tr>
+                        <td>{{toner.nombreToner}}</td>
+                        <td>{{toner.modeloImpre}}</td>
+                        <td>{{toner.color}}</td>
+                        <td>{{toner.convMarco}}</td>
+                        <td>{{toner.stockDispo}}</td>
+                        <td><a [routerLink]="['/actToner',indice]">Modificar</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
             </div>
         </div>
     </div>

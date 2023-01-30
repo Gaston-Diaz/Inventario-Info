@@ -49,10 +49,31 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <div *ngFor="let pc of pcs, let indice = index">
-                    <a [routerLink]="['/actPC',indice]">
-                        {{indice}} {{pc.id}} {{pc.ram}} {{pc.so}} {{pc.ssd}} {{pc.extra}} {{pc.disponible}}
-                    </a>
+                <div >
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">RAM</th>
+                            <th scope="col">SO</th>
+                            <th scope="col">SSD</th>
+                            <th scope="col">INFO EXTRA</th>
+                            <th scope="col">DISPONIBLE</th>
+                            <th scope="col">MODIFICAR</th>
+                          </tr>
+                        </thead>
+                        <tbody *ngFor="let pc of pcs, let indice = index">
+                          <tr>
+                            <td>{{pc.id}}</td>
+                            <td>{{pc.ram}}</td>
+                            <td>{{pc.so}}</td>
+                            <td>{{pc.ssd}}</td>
+                            <td>{{pc.extra}}</td>
+                            <td>{{pc.disponible}}</td>
+                            <td><a [routerLink]="['/actPC',indice]">Modificar</a></td>
+                          </tr>
+                        </tbody>
+                      </table>
                 </div>
             </div>
         </div>
