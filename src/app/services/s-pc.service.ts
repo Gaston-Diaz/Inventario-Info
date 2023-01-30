@@ -12,5 +12,5 @@ export class SPcService {
 
   agregarPCService(unPC: Pc){
     this.pcs.push(unPC);
-  }
+  } 
 }

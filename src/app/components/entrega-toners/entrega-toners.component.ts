@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EToner} from 'src/app/models/eToner.model'
+import { SEtonerServiceService } from 'src/app/services/s-etoner-service.service';
 
 
 @Component({
@@ -10,13 +11,15 @@ import { EToner} from 'src/app/models/eToner.model'
 export class EntregaTonersComponent {
   titulo = "Entrega de Toners";
 
-  constructor() { }
+  constructor(private etService:SEtonerServiceService) { 
+    this.etoners = this.etService.eToners;
+  }
 
   etoners:EToner[]=[]
 
   agregarEToner(){
     let eToner = new EToner(this.inputFecha,this.inputIdToner,this.inputColor,this.inputEntregadoA,this.inputOficina,this.inputDe);
-    this.etoners.push(eToner);
+    this.etService.agregarETonerService(eToner);
 
   }
 
