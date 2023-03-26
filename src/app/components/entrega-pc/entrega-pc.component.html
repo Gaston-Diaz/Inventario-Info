@@ -40,9 +40,33 @@
     <div class="container">
         <div class="row">
             <div class="col">
+                <!--
                 <div *ngFor="let epc of ePcs">
                     {{epc.fechaEPC}} {{epc.idPc}} {{epc.entregadoA}} {{epc.oficina}} {{epc.de}}
-                </div>
+                </div>-->
+                <div >
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">ID PC</th>
+                        <th scope="col">Entregado a</th>
+                        <th scope="col">Oficina</th>
+                        <th scope="col">De</th>
+                      </tr>
+                    </thead>
+                    <tbody *ngFor="let epc of ePcs, let indice = index">
+                      <tr>
+                        <td>{{epc.fechaEPC}}</td>
+                        <td>{{epc.idPc}}</td>
+                        <td>{{epc.entregadoA}}</td>
+                        <td>{{epc.oficina}}</td>
+                        <td>{{epc.de}}</td>
+                        <td><a [routerLink]="['/actEPC',indice]">Modificar</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
             </div>
         </div>
     </div>

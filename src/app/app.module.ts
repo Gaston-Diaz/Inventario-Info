@@ -16,6 +16,9 @@ import { SPerisfericoService } from './services/s-perisferico.service';
 import { ModTonerComponent } from './components/toners/mod-toner/mod-toner.component';
 import { ModPerisfericosComponent } from './components/perifericos/mod-perisfericos/mod-perisfericos.component';
 import { ModPCComponent } from './components/pcs/mod-pc/mod-pc.component';
+import { SEpcServiceService } from './services/s-epc-service.service';
+import { ModEpcComponent } from './components/entrega-pc/mod-epc/mod-epc.component';
+
 
 @NgModule({
   declarations: [
@@ -28,14 +31,16 @@ import { ModPCComponent } from './components/pcs/mod-pc/mod-pc.component';
     EntregaPcComponent,
     ModTonerComponent,
     ModPerisfericosComponent,
-    ModPCComponent
+    ModPCComponent,
+    ModEpcComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [STonerService,SPcService,SPerisfericoService],
+  providers: [STonerService,SPcService,SPerisfericoService,SEpcServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="col"><h1>{{titulo}}</h1></div>
+    <br>
+    <div class="form-group row">
+
+        <div class=" form-group col md-3">
+            <label for="fechaEPC">Fecha:</label>
+            <input type="text" nombre="fechaEPC" id="fechaEPC" placeholder="Fecha" class="form-control" [(ngModel)]="inputFechaPCM">
+        </div>
+
+        <div class=" form-group col md-3">
+            <label for="idPcE">ID PC:</label>
+            <input type="text" nombre="idPcE" id="idPcE" placeholder="ID PC" class="form-control" [(ngModel)]="inputIdPcM">
+        </div>
+
+        <div class=" form-group col md-3">
+            <label for="entregaA">Entregado A:</label>
+            <input type="text" nombre="entregaA" id="entregaA" placeholder="Entregado a" class="form-control" [(ngModel)]="inputEntregadoAM">
+        </div>
+
+        <div class=" form-group col md-3">
+            <label for="oficinaE">Oficina</label>
+            <input type="text" nombre="oficinaE" id="oficinaE" placeholder="Oficina" class="form-control" [(ngModel)]="inputOficinaM">
+        </div>
+
+        <div class=" form-group col md-3">
+            <label for="deE">De:</label>
+            <input type="text" nombre="deE" id="deE" placeholder="De" class="form-control" [(ngModel)]="inputDeM">
+        </div>
+
+        <div class="col" style="margin-top: 2.1%;">
+            <button type="submit" class="btn btn-primary" (click)="modificarEPC()">Modificar</button>
+        </div>
+
+    </div>
+
+    <br>
+
+</div>
