@@ -50,8 +50,37 @@
     <div class="container">
         <div class="row">
             <div class="col">
+                <!--
                 <div *ngFor="let prod of ePerifericos">
                     {{prod.fecha}} {{prod.producto}} {{prod.descripcion}} {{prod.cantidad}} {{prod.entregadoA}} {{prod.oficina}} {{prod.de}}
+                </div> -->
+                <div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Fecha</th>
+                                <th scope="col">Producto</th>
+                                <th scope="col">Descripcion</th>
+                                <th scope="col">Cantidad</th>
+                                <th scope="col">Entregado A</th>
+                                <th scope="col">Oficina</th>
+                                <th scope="col">De</th>
+                                <th scope="col">Modificar</th>
+                            </tr>
+                        </thead>
+                        <tbody *ngFor="let prod of ePerifericos, let indice = index">
+                            <tr>
+                                <td>{{prod.fecha}}</td>
+                                <td>{{prod.producto}}</td>
+                                <td>{{prod.descripcion}}</td>
+                                <td>{{prod.cantidad}}</td>
+                                <td>{{prod.entregadoA}}</td>
+                                <td>{{prod.oficina}}</td>
+                                <td>{{prod.de}}</td>
+                                <td><a [routerLink]="['/actEP',indice]">Modificar</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>

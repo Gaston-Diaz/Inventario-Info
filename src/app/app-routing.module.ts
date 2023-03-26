@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { EntregaPcComponent } from './components/entrega-pc/entrega-pc.component';
 import { ModEpcComponent } from './components/entrega-pc/mod-epc/mod-epc.component';
 import { EntregaProductosComponent } from './components/entrega-productos/entrega-productos.component';
+import { ModEProdComponent } from './components/entrega-productos/mod-eprod/mod-eprod.component';
 import { EntregaTonersComponent } from './components/entrega-toners/entrega-toners.component';
 import { ModPCComponent } from './components/pcs/mod-pc/mod-pc.component';
 import { PcsComponent } from './components/pcs/pcs.component';
@@ -22,7 +23,8 @@ const routes: Routes = [
   {path: 'actToner/:id', component:ModTonerComponent},
   {path: 'actPeriferico/:id', component:ModPerisfericosComponent},
   {path: 'actPC/:id', component:ModPCComponent},
-  {path: 'actEPC/:id',component: ModEpcComponent}
+  {path: 'actEPC/:id',component: ModEpcComponent},
+  {path: 'actEP/:id',component:ModEProdComponent}
 ];
 
 @NgModule({

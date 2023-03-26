@@ -18,6 +18,7 @@ import { ModPerisfericosComponent } from './components/perifericos/mod-perisferi
 import { ModPCComponent } from './components/pcs/mod-pc/mod-pc.component';
 import { SEpcServiceService } from './services/s-epc-service.service';
 import { ModEpcComponent } from './components/entrega-pc/mod-epc/mod-epc.component';
+import { ModEProdComponent } from './components/entrega-productos/mod-eprod/mod-eprod.component';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { ModEpcComponent } from './components/entrega-pc/mod-epc/mod-epc.compone
     ModPerisfericosComponent,
     ModPCComponent,
     ModEpcComponent,
+    ModEProdComponent,
 
   ],
   imports: [

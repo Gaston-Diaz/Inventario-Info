@@ -1,0 +1,49 @@
+
+<div class="container">
+    <div class="col"><h1>{{titulo}}</h1></div>
+    <br>
+    <div class="form-group row">
+
+        <div class="form-group col md-3">
+            <label for="eFecha">Fecha:</label>
+            <input type="text" nombre="eFecha" id="eFecha" placeholder="Fecha" class="form-control" [(ngModel)]="inputFechaM">
+        </div>    
+
+        <div class="form-group col md-3">
+            <label for="producto">Producto:</label>
+            <input type="text" nombre="producto" id="producto" placeholder="Producto" class="form-control" [(ngModel)]="inputProductoM">
+        </div>   
+
+        <div class="form-group col md-3">
+            <label for="descripcion">Descripcion:</label>
+            <input type="text" nombre="descripcion" id="descripcion" placeholder="Descripcion" class="form-control" [(ngModel)]="inputDescripcionM">
+        </div>  
+
+        <div class="form-group col md-3">
+            <label for="cantidad">Cantidad</label>
+            <input type="text" nombre="cantidad" id="cantidad" placeholder="Cantidad" class="form-control" [(ngModel)]="inputCantidadM">
+        </div> 
+
+        <div class="form-group col md-3">
+            <label for="entregadoA">Entregado A:</label>
+            <input type="text" nombre="entregadoA" id="entregadoA" placeholder="Entregado A" class="form-control" [(ngModel)]="inputEntregadoAM">
+        </div>  
+
+        <div class="form-group col md-3">
+            <label for="oficina">Oficina:</label>
+            <input type="text" nombre="oficina" id="oficina" placeholder="Oficina" class="form-control" [(ngModel)]="inputOficinaM">
+        </div>   
+
+        <div class="form-group col md-3">
+            <label for="de">De:</label>
+            <input type="text" nombre="de" id="de" placeholder="De" class="form-control" [(ngModel)]="inputDeM">
+        </div>      
+
+        <div class="col" style="margin-top: 2.1%;">
+            <button type="submit" class="btn btn-primary" (click)="modificarEP()">Modificar</button>
+        </div>
+
+    </div>
+
+</div>
+
