@@ -19,6 +19,7 @@ import { ModPCComponent } from './components/pcs/mod-pc/mod-pc.component';
 import { SEpcServiceService } from './services/s-epc-service.service';
 import { ModEpcComponent } from './components/entrega-pc/mod-epc/mod-epc.component';
 import { ModEProdComponent } from './components/entrega-productos/mod-eprod/mod-eprod.component';
+import { ModEtonerComponent } from './components/entrega-toners/mod-etoner/mod-etoner.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { ModEProdComponent } from './components/entrega-productos/mod-eprod/mod-
     ModPCComponent,
     ModEpcComponent,
     ModEProdComponent,
+    ModEtonerComponent,
 
   ],
   imports: [
