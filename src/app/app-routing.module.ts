@@ -5,6 +5,7 @@ import { ModEpcComponent } from './components/entrega-pc/mod-epc/mod-epc.compone
 import { EntregaProductosComponent } from './components/entrega-productos/entrega-productos.component';
 import { ModEProdComponent } from './components/entrega-productos/mod-eprod/mod-eprod.component';
 import { EntregaTonersComponent } from './components/entrega-toners/entrega-toners.component';
+import { ModEtonerComponent } from './components/entrega-toners/mod-etoner/mod-etoner.component';
 import { ModPCComponent } from './components/pcs/mod-pc/mod-pc.component';
 import { PcsComponent } from './components/pcs/pcs.component';
 import { ModPerisfericosComponent } from './components/perifericos/mod-perisfericos/mod-perisfericos.component';
@@ -24,7 +25,8 @@ const routes: Routes = [
   {path: 'actPeriferico/:id', component:ModPerisfericosComponent},
   {path: 'actPC/:id', component:ModPCComponent},
   {path: 'actEPC/:id',component: ModEpcComponent},
-  {path: 'actEP/:id',component:ModEProdComponent}
+  {path: 'actEP/:id',component:ModEProdComponent},
+  {path: 'actET/:id',component:ModEtonerComponent}
 ];
 
 @NgModule({
