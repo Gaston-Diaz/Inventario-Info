@@ -20,7 +20,7 @@ export class TonersComponent{
   
   
   agregarToner(){
-    let miToner = new Toner(this.inputMToner,this.inputMImpre,this.inputColor,this.inputConve,this.inputStock);
+    let miToner = new Toner(this.inputMToner,this.inputMImpre,this.inputColor,this.inputStock);
     this.tonerService.agregarTonerService(miToner);
   }
   
@@ -28,7 +28,6 @@ export class TonersComponent{
   inputMToner:string= "";
   inputMImpre:string= "";
   inputColor:string= "";
-  inputConve:string="";
   inputStock:number= 0;
 
 }

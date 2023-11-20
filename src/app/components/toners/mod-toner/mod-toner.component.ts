@@ -22,12 +22,11 @@ export class ModTonerComponent implements OnInit {
     this.inputMTonerM = toner.nombreToner; //cargo los datos en los campos de texto
     this.inputMImpreM = toner.modeloImpre;
     this.inputColorM = toner.color;
-    this.inputConveM = toner.convMarco;
     this.inputStockM = toner.stockDispo;
   }
 
   modificarToner(){
-    let miToner = new Toner(this.inputMTonerM,this.inputMImpreM,this.inputColorM,this.inputConveM,this.inputStockM);
+    let miToner = new Toner(this.inputMTonerM,this.inputMImpreM,this.inputColorM,this.inputStockM);
     this.tonerService.actualizarToner(this.indice, miToner);
     this.router.navigate(['/toners']);
   }
@@ -35,7 +34,6 @@ export class ModTonerComponent implements OnInit {
   inputMTonerM:string= "";
   inputMImpreM:string= "";
   inputColorM:string= "";
-  inputConveM:string="";
   inputStockM:number= 0;
 
   indice:number;

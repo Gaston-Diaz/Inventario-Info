@@ -8,13 +8,7 @@ export class STonerService {
   
   constructor() { }
 
-  toners:Toner[]=[
-
-    new Toner("toner1","impresora1","color","si",5),
-    new Toner("toner2","impresora2","negro","si",5),
-    new Toner("toner3","impresora3","color","si",5),
-    new Toner("toner4","impresora4","color","si",5),
-  ];
+  toners:Toner[]=[];
   
   agregarTonerService(toner: Toner){
     this.toners.push(toner);
@@ -30,7 +24,6 @@ export class STonerService {
     tonerModificado.nombreToner = toner.nombreToner;
     tonerModificado.modeloImpre = toner.modeloImpre;
     tonerModificado.color = toner.color;
-    tonerModificado.convMarco = toner.convMarco;  
     tonerModificado.stockDispo = toner.stockDispo;
   }
 
